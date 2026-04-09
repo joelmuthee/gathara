@@ -312,34 +312,32 @@ ul { list-style: none; }
 ══════════════════════════════ */
 .consultation-modal {
   display: none; position: fixed; inset: 0; z-index: 9999;
-  background: rgba(0,0,0,.65); backdrop-filter: blur(4px);
+  background: rgba(0,0,0,.7); backdrop-filter: blur(6px);
   align-items: center; justify-content: center;
 }
 .consultation-modal.open { display: flex; }
 .consultation-modal-inner {
-  background: #fff; border-radius: 16px; width: 100%; max-width: 560px;
-  max-height: 90vh; overflow: hidden; position: relative;
-  box-shadow: 0 24px 80px rgba(0,0,0,.4);
-  margin: 16px;
+  background: #fff;
+  width: calc(100% - 32px); max-width: 620px;
+  height: calc(100vh - 48px); max-height: 860px;
+  border-radius: 16px; overflow: hidden; position: relative;
+  box-shadow: 0 24px 80px rgba(0,0,0,.5);
+  display: flex; flex-direction: column;
 }
 .consultation-modal-close {
-  position: absolute; top: 12px; right: 14px; z-index: 10;
-  background: rgba(0,0,0,.08); border: none; width: 32px; height: 32px;
+  position: absolute; top: 14px; right: 16px; z-index: 10;
+  background: rgba(0,0,0,.1); border: none; width: 34px; height: 34px;
   border-radius: 50%; font-size: 1.1rem; cursor: pointer; display: flex;
   align-items: center; justify-content: center; color: #333;
   transition: background .2s;
 }
-.consultation-modal-close:hover { background: rgba(0,0,0,.18); }
+.consultation-modal-close:hover { background: rgba(0,0,0,.22); }
 .consultation-modal-inner iframe {
-  width: 100%; height: 615px; border: none; display: block;
+  width: 100%; flex: 1; border: none; display: block; height: 100%;
 }
 /* Profile modal overrides */
 #profileModal .consultation-modal-inner {
   background: #182333;
-  max-width: 480px;
-}
-#profileModal .consultation-modal-inner iframe {
-  height: 380px;
 }
 #profileModal .consultation-modal-close {
   background: rgba(255,255,255,.15);
